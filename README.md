@@ -10,7 +10,7 @@
 - 🎨 **Material You (ダイナミックカラー)** — 壁紙に合わせた動的配色 (Android 12+、オン/オフ切替可)
 - 🌗 **4 つのテーマ**: システムに従う / ホワイト / ダーク / **AMOLED ブラック (純黒)**
 - 🔍 内蔵検索エンジン: DuckDuckGo / Google / Bing / Yahoo! JAPAN / Brave / Startpage / Ecosia / Qwant / Mojeek / SearXNG / Wikipedia (ja) ＋ **カスタム URL**
-- 🔗 カスタムテンプレートは `%s` と `{query}` 両対応。検索ワードは自動で URL エンコード
+- 🔗 カスタムテンプレートは `%s` と `{query}` 両対応。検索ワードは自動で URL エンコード。カスタム URL は **HTTPS のみ**
 - 🧪 「検索テスト」ボタンで実際の `ACTION_WEB_SEARCH` インテントを発行して動作確認
 - 📱 Android 13+ のテーマアイコン (モノクローム) 対応アダプティブアイコン
 - 🪶 軽量 (R8 最適化済み、約 1.5 MB) / 権限なし / 広告なし / 追跡なし
@@ -34,6 +34,14 @@
 | AMOLED ブラック | 純黒 `#000000` ベース (有機 EL 省電力) |
 
 「Material You カラー」スイッチで、各テーマの **アクセント色** を壁紙ベースのダイナミックカラーに差し替えられます (Android 12 以降)。表面色 (ニュートラル) は選択中のテーマが常に優先されます。
+
+## セキュリティ
+
+- 権限なし・ネットワーク通信なし (検索はブラウザに委譲)
+- カスタム検索エンジン URL は HTTPS のみ
+- バックアップ無効 (`android:allowBackup="false"`)
+- exported コンポーネントは最小限。`LinkProxyActivity` は http/https の `ACTION_VIEW` のみ転送
+- リリース APK は R8 適用・v1+v2 署名済み
 
 ## ビルド方法
 
@@ -88,7 +96,7 @@ app/src/main/java/io/github/websearchcustomizer/
 ```
 
 - `SearchActivity` — `ACTION_WEB_SEARCH` の `query` extra と `ACTION_SEND` (text/plain) を処理します。検索ワードは UTF-8 で URL エンコードされ、テンプレートの `%s` / `{query}` に差し込まれます。
-- `LinkProxyActivity` — 原本の互換性のため維持されているリンクの仲介アクティビティです。意図的に `CATEGORY_DEFAULT` / `BROWSABLE` を宣言していないため、**既定ブラウザに選択されることはなく**、明示的に指定された場合のみ、自分自身を除外した安全な転送を行います (原本の無限ループ問題を解消)。
+- `LinkProxyActivity` — 原本の互換性のため維持されているリンクの仲介アクティビティです。意図的に `CATEGORY_DEFAULT` / `BROWSABLE` を宣言していないため、**既定ブラウザに選択されることはなく**、明示的に指定された場合のみ、http/https に限定して自分自身を除外した安全な転送を行います (原本の無限ループ問題を解消)。
 
 ## OSS 版で変更・改善した点
 
@@ -96,6 +104,7 @@ app/src/main/java/io/github/websearchcustomizer/
 - 検索ワードの URL エンコードを追加 (原本は生文字列をそのまま挿入しており、空白を含む検索が壊れるケースがありました)
 - カスタム URL に `{query}` プレースホルダーを追加対応
 - テーマ選択 (ホワイト / ダーク / AMOLED) と Material You ダイナミックカラーの追加
+- セキュリティ強化: カスタム URL は HTTPS のみ、バックアップ無効、LinkProxy は http/https のみ
 - minSdk 23 (Material 1.14 の要件) / targetSdk 36
 
 ## ライセンス

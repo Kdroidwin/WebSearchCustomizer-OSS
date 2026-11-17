@@ -92,12 +92,12 @@ class GeneralPreferenceFragment : PreferenceFragmentCompat(),
 
     /**
      * Returns an error message for a custom engine URL, or null when valid.
-     * A valid template needs a scheme (https://...) and a query placeholder
-     * ("%s" or "{query}").
+     * A valid template must start with https:// and contain a query
+     * placeholder ("%s" or "{query}").
      */
     private fun validateCustomUrl(value: String?): String? {
         if (value.isNullOrBlank()) return getString(R.string.error_url_empty)
-        if (!SCHEME.matcher(value).lookingAt()) return getString(R.string.error_url_scheme)
+        if (!HTTPS_SCHEME.matcher(value).lookingAt()) return getString(R.string.error_url_scheme)
         val hasPlaceholder = value.contains("%s") || value.contains("{query}")
         if (!hasPlaceholder) return getString(R.string.error_url_placeholder)
         return null
@@ -226,6 +226,6 @@ class GeneralPreferenceFragment : PreferenceFragmentCompat(),
         const val KEY_ABOUT_LICENSE = "about_license"
         const val KEY_ABOUT_ORIGINAL = "about_original"
         const val RECREATE_DELAY_MS = 150L
-        val SCHEME: Pattern = Pattern.compile("[A-Za-z][A-Za-z0-9+.-]*://")
+        val HTTPS_SCHEME: Pattern = Pattern.compile("https://", Pattern.CASE_INSENSITIVE)
     }
 }

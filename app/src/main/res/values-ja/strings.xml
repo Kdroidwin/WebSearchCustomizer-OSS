@@ -38,6 +38,6 @@
     <string name="error_no_browser">ブラウザがインストールされていません</string>
     <string name="error_generic">エラーが発生しました</string>
     <string name="error_url_empty">URL を入力してください</string>
-    <string name="error_url_scheme">URL はスキームで始まる必要があります（例: https://）</string>
+    <string name="error_url_scheme">URL は https:// で始まる必要があります</string>
     <string name="error_url_placeholder">URL には検索ワードのプレースホルダー %s または {query} が必要です</string>
 </resources>

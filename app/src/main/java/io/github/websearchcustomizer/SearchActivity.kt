@@ -41,12 +41,17 @@ class SearchActivity : Activity() {
         }
 
         if (!query.isNullOrBlank()) {
-            try {
-                startActivity(browserIntent(buildUrl(query)))
-            } catch (_: ActivityNotFoundException) {
-                Toast.makeText(this, R.string.error_no_browser, Toast.LENGTH_SHORT).show()
-            } catch (_: Exception) {
+            val target = browserIntent(buildUrl(query))
+            if (target == null) {
                 Toast.makeText(this, R.string.error_generic, Toast.LENGTH_SHORT).show()
+            } else {
+                try {
+                    startActivity(target)
+                } catch (_: ActivityNotFoundException) {
+                    Toast.makeText(this, R.string.error_no_browser, Toast.LENGTH_SHORT).show()
+                } catch (_: Exception) {
+                    Toast.makeText(this, R.string.error_generic, Toast.LENGTH_SHORT).show()
+                }
             }
         }
         finish()
@@ -75,8 +80,13 @@ class SearchActivity : Activity() {
         }
     }
 
-    private fun browserIntent(url: String): Intent =
-        Intent(Intent.ACTION_VIEW, Uri.parse(url))
+    private fun browserIntent(url: String): Intent? {
+        val uri = Uri.parse(url)
+        val scheme = uri.scheme
+        val isWebLink = scheme.equals("http", ignoreCase = true) ||
+            scheme.equals("https", ignoreCase = true)
+        return if (isWebLink) Intent(Intent.ACTION_VIEW, uri) else null
+    }
 
     private companion object {
         const val PLACEHOLDER = "%s"
