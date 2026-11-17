@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Web Search Customizer</string>
+    <string name="app_name_short">WSC</string>
+
+    <!-- 検索エンジン -->
+    <string name="cat_engine">検索エンジン</string>
+    <string name="pref_title_engine">デフォルトのエンジン</string>
+    <string name="pref_engine_custom">カスタム URL…</string>
+    <string name="pref_title_engine_custom">カスタム検索エンジンの URL</string>
+    <string name="pref_summary_engine_custom">上で「カスタム URL」を選択した場合に使用します。検索ワードは「%s」（または「{query}」）に置き換えられます。</string>
+    <string name="pref_title_engine_test">検索テスト</string>
+    <string name="pref_summary_engine_test">他のアプリと同じ ACTION_WEB_SEARCH インテントを発行します。</string>
+    <string name="custom_url_hint">https://example.com/search?q=%s</string>
+
+    <!-- 外観 -->
+    <string name="cat_appearance">外観</string>
+    <string name="pref_title_theme">テーマ</string>
+    <string name="pref_title_dynamic">Material You カラー</string>
+    <string name="pref_summary_dynamic">壁紙ベースのダイナミックカラーで UI を着色します（Android 12 以降）。</string>
+
+    <!-- このアプリについて -->
+    <string name="cat_about">このアプリについて</string>
+    <string name="pref_title_version">バージョン</string>
+    <string name="pref_title_source">ソースコード</string>
+    <string name="pref_title_license">ライセンス</string>
+    <string name="pref_title_original">原作</string>
+    <string name="pref_summary_original">Web Search Customizer（Marcel Dopita / brouken.com 作）に着想を得た、独立したオープンソース実装です。原作とは関係ありません。</string>
+
+    <!-- テーマ名 -->
+    <string name="theme_system">システムに従う</string>
+    <string name="theme_light">ホワイト（ライト）</string>
+    <string name="theme_dark">ダーク</string>
+    <string name="theme_amoled">AMOLED ブラック</string>
+
+    <!-- その他 -->
+    <string name="test_query">Web Search Customizer テスト</string>
+    <string name="error_no_browser">ブラウザがインストールされていません</string>
+    <string name="error_generic">エラーが発生しました</string>
+    <string name="error_url_empty">URL を入力してください</string>
+    <string name="error_url_scheme">URL はスキームで始まる必要があります（例: https://）</string>
+    <string name="error_url_placeholder">URL には検索ワードのプレースホルダー %s または {query} が必要です</string>
+</resources>

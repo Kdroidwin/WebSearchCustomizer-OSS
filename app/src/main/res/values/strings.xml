@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Web Search Customizer</string>
+    <string name="app_name_short">WSC</string>
+
+    <!-- Search engine -->
+    <string name="cat_engine">Search engine</string>
+    <string name="pref_title_engine">Default engine</string>
+    <string name="pref_engine_custom">Custom URL…</string>
+    <string name="pref_title_engine_custom">Custom engine URL</string>
+    <string name="pref_summary_engine_custom">Used when "Custom URL" is selected above. The search query replaces "%s" (or "{query}").</string>
+    <string name="pref_title_engine_test">Test search</string>
+    <string name="pref_summary_engine_test">Fires an ACTION_WEB_SEARCH intent, exactly like other apps do.</string>
+    <string name="custom_url_hint">https://example.com/search?q=%s</string>
+
+    <!-- Appearance -->
+    <string name="cat_appearance">Appearance</string>
+    <string name="pref_title_theme">Theme</string>
+    <string name="pref_title_dynamic">Material You colors</string>
+    <string name="pref_summary_dynamic">Tint the interface with the wallpaper-based dynamic color palette (Android 12+).</string>
+
+    <!-- About -->
+    <string name="cat_about">About</string>
+    <string name="pref_title_version">Version</string>
+    <string name="pref_title_source">Source code</string>
+    <string name="source_url" translatable="false">https://github.com/websearchcustomizer/websearchcustomizer-oss</string>
+    <string name="pref_title_license">License</string>
+    <string name="pref_title_original">Inspired by</string>
+    <string name="original_app_url" translatable="false">https://play.google.com/store/apps/details?id=com.brouken.websearch</string>
+    <string name="pref_summary_original">Web Search Customizer by Marcel Dopita (brouken.com). This is an independent open-source reimplementation, not affiliated with the original.</string>
+
+    <!-- Theme names -->
+    <string name="theme_system">Follow system</string>
+    <string name="theme_light">White (light)</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_amoled">AMOLED black</string>
+
+    <!-- Misc -->
+    <string name="test_query">Web Search Customizer test</string>
+    <string name="error_no_browser">No browser is installed</string>
+    <string name="error_generic">Something went wrong</string>
+    <string name="error_url_empty">Enter a URL</string>
+    <string name="error_url_scheme">URL must start with a scheme, e.g. https://</string>
+    <string name="error_url_placeholder">URL must contain the query placeholder %s or {query}</string>
+</resources>

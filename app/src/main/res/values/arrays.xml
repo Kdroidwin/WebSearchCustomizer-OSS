@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Displayed titles for the engine picker. Values (URL templates) are not translated. -->
+    <string-array name="pref_engine_titles">
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+        <item>Bing</item>
+        <item>Yahoo! JAPAN</item>
+        <item>Brave Search</item>
+        <item>Startpage</item>
+        <item>Ecosia</item>
+        <item>Qwant</item>
+        <item>Mojeek</item>
+        <item>SearXNG (searx.be)</item>
+        <item>Wikipedia (ja)</item>
+        <item>@string/pref_engine_custom</item>
+    </string-array>
+
+    <string-array name="pref_engine_values" translatable="false">
+        <item>https://duckduckgo.com/?q=%s</item>
+        <item>https://www.google.com/search?q=%s</item>
+        <item>https://www.bing.com/search?q=%s</item>
+        <item>https://search.yahoo.co.jp/search?p=%s</item>
+        <item>https://search.brave.com/search?q=%s</item>
+        <item>https://www.startpage.com/sp/search?query=%s</item>
+        <item>https://www.ecosia.org/search?q=%s</item>
+        <item>https://www.qwant.com/?q=%s</item>
+        <item>https://www.mojeek.com/search?q=%s</item>
+        <item>https://searx.be/search?q=%s</item>
+        <item>https://ja.wikipedia.org/w/index.php?search=%s</item>
+        <item>custom</item>
+    </string-array>
+
+    <string-array name="pref_theme_titles">
+        <item>@string/theme_system</item>
+        <item>@string/theme_light</item>
+        <item>@string/theme_dark</item>
+        <item>@string/theme_amoled</item>
+    </string-array>
+
+    <string-array name="pref_theme_values" translatable="false">
+        <item>system</item>
+        <item>light</item>
+        <item>dark</item>
+        <item>amoled</item>
+    </string-array>
+</resources>

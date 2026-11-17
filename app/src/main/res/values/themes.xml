@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Base theme. Night mode (system/light/dark) is applied at runtime via
+     AppCompatDelegate; surface overlays (White / AMOLED) are applied per
+     activity in SettingsActivity.onCreate. -->
+<resources>
+
+    <style name="Theme.WSC" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">?attr/colorSurface</item>
+    </style>
+
+    <style name="Theme.WSC.NoDisplay" parent="@android:style/Theme.NoDisplay">
+    </style>
+
+    <!-- Fixed white surfaces (theme = White / light) -->
+    <style name="ThemeOverlay.WSC.White" parent="">
+        <item name="android:colorBackground">@color/white_background</item>
+        <item name="android:windowBackground">@color/white_background</item>
+        <item name="colorSurface">@color/white_background</item>
+        <item name="colorSurfaceDim">@color/white_container_1</item>
+        <item name="colorSurfaceBright">@color/white_background</item>
+        <item name="colorSurfaceContainerLowest">@color/white_container_1</item>
+        <item name="colorSurfaceContainerLow">@color/white_container_2</item>
+        <item name="colorSurfaceContainer">@color/white_container_3</item>
+        <item name="colorSurfaceContainerHigh">@color/white_container_4</item>
+        <item name="colorSurfaceContainerHighest">@color/white_container_5</item>
+        <item name="colorOnSurface">@color/white_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/white_on_surface_variant</item>
+        <item name="colorOutline">@color/white_outline</item>
+        <item name="colorOutlineVariant">@color/white_outline_variant</item>
+    </style>
+
+    <!-- Pure black surfaces for OLED displays (theme = AMOLED black) -->
+    <style name="ThemeOverlay.WSC.Amoled" parent="">
+        <item name="android:colorBackground">@color/amoled_background</item>
+        <item name="android:windowBackground">@color/amoled_background</item>
+        <item name="colorSurface">@color/amoled_background</item>
+        <item name="colorSurfaceDim">@color/amoled_container_1</item>
+        <item name="colorSurfaceBright">@color/amoled_container_2</item>
+        <item name="colorSurfaceContainerLowest">@color/amoled_container_1</item>
+        <item name="colorSurfaceContainerLow">@color/amoled_container_2</item>
+        <item name="colorSurfaceContainer">@color/amoled_container_3</item>
+        <item name="colorSurfaceContainerHigh">@color/amoled_container_4</item>
+        <item name="colorSurfaceContainerHighest">@color/amoled_container_5</item>
+        <item name="colorOnSurface">@color/amoled_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/amoled_on_surface_variant</item>
+        <item name="colorOutline">@color/amoled_outline</item>
+        <item name="colorOutlineVariant">@color/amoled_outline_variant</item>
+    </style>
+
+</resources>

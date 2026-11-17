@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- AMOLED black palette (neutral grays keep accents from primary/dynamic) -->
+    <color name="amoled_background">#FF000000</color>
+    <color name="amoled_container_1">#FF0A0A0A</color>
+    <color name="amoled_container_2">#FF0F0F0F</color>
+    <color name="amoled_container_3">#FF141414</color>
+    <color name="amoled_container_4">#FF1A1A1A</color>
+    <color name="amoled_container_5">#FF202020</color>
+    <color name="amoled_on_surface">#FFE6E6E6</color>
+    <color name="amoled_on_surface_variant">#FF9E9E9E</color>
+    <color name="amoled_outline">#FF5C5C5C</color>
+    <color name="amoled_outline_variant">#FF2E2E2E</color>
+
+    <!-- Fixed white palette -->
+    <color name="white_background">#FFFFFFFF</color>
+    <color name="white_container_1">#FFFAFAFA</color>
+    <color name="white_container_2">#FFF5F5F5</color>
+    <color name="white_container_3">#FFF0F0F0</color>
+    <color name="white_container_4">#FFEAEAEA</color>
+    <color name="white_container_5">#FFE4E4E4</color>
+    <color name="white_on_surface">#FF1B1B1B</color>
+    <color name="white_on_surface_variant">#FF6F6F6F</color>
+    <color name="white_outline">#FF8A8A8A</color>
+    <color name="white_outline_variant">#FFDEDEDE</color>
+
+    <!-- Launcher icon -->
+    <color name="ic_launcher_background">#FF4285F4</color>
+</resources>

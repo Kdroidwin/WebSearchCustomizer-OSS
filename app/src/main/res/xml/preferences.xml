@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Web Search Customizer (OSS edition)
+  SPDX-License-Identifier: MIT
+-->
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/cat_engine">
+
+        <ListPreference
+            app:defaultValue="https://duckduckgo.com/?q=%s"
+            app:entries="@array/pref_engine_titles"
+            app:entryValues="@array/pref_engine_values"
+            app:iconSpaceReserved="false"
+            app:key="engine"
+            app:title="@string/pref_title_engine"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:defaultValue="https://lite.duckduckgo.com/lite/?q=%s"
+            app:iconSpaceReserved="false"
+            app:key="engine_custom"
+            app:title="@string/pref_title_engine_custom"
+            app:summary="@string/pref_summary_engine_custom"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="engine_test"
+            app:summary="@string/pref_summary_engine_test"
+            app:title="@string/pref_title_engine_test" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/cat_appearance">
+
+        <ListPreference
+            app:defaultValue="system"
+            app:entries="@array/pref_theme_titles"
+            app:entryValues="@array/pref_theme_values"
+            app:iconSpaceReserved="false"
+            app:key="theme"
+            app:title="@string/pref_title_theme"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="dynamic_colors"
+            app:summary="@string/pref_summary_dynamic"
+            app:title="@string/pref_title_dynamic" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/cat_about">
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="about_version"
+            app:title="@string/pref_title_version" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="about_source"
+            app:summary="@string/source_url"
+            app:title="@string/pref_title_source" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="about_license"
+            app:summary="MIT License"
+            app:title="@string/pref_title_license" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="about_original"
+            app:summary="@string/pref_summary_original"
+            app:title="@string/pref_title_original" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
